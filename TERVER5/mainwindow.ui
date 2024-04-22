@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>687</width>
+    <height>610</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_4">
+    <item>
+     <widget class="QCustomPlot" name="widget" native="true"/>
+    </item>
+    <item>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="2">
+       <widget class="QGroupBox" name="groupBox_3">
+        <property name="title">
+         <string>Эмпирическая функция:</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <item>
+          <widget class="QPushButton" name="V2_emp">
+           <property name="text">
+            <string>Построить для В-2:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="V5_emp">
+           <property name="text">
+            <string>Построить для В-5:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="V9_emp">
+           <property name="text">
+            <string>Построить для В-9:</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QGroupBox" name="groupBox">
+        <property name="title">
+         <string>Полигоны частот:</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <widget class="QPushButton" name="V2_poli_ch">
+           <property name="text">
+            <string>Построить для В-2:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="V5_poli_ch">
+           <property name="text">
+            <string>Построить для В-5:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="V9_poli_ch">
+           <property name="text">
+            <string>Построить для В-9:</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QGroupBox" name="groupBox_2">
+        <property name="title">
+         <string>Полигоны относительных частот:</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <widget class="QPushButton" name="V2_poli_otch">
+           <property name="text">
+            <string>Построить для В-2:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="V5_poli_otch">
+           <property name="text">
+            <string>Построить для В-5:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="V9_poli_otch">
+           <property name="text">
+            <string>Построить для В-9:</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QRadioButton" name="POLIGON_CH">
+        <property name="text">
+         <string>Полигон частот</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="POLIGON_OTCH">
+        <property name="text">
+         <string>Полигон относительных частот</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="EMP_FUN">
+        <property name="text">
+         <string>Эмпирическая функция:</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QPushButton" name="clear_plot">
+      <property name="text">
+       <string>Очистить поле графиков</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>687</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QCustomPlot</class>
+   <extends>QWidget</extends>
+   <header>qcustomplot.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>V5_poli_ch</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>V5_poli_ch</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>126</x>
+     <y>310</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>126</x>
+     <y>310</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>V2_poli_ch</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>V2_poli_ch</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>48</x>
+     <y>264</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>88</x>
+     <y>264</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>V9_poli_ch</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>V9_poli_ch</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>126</x>
+     <y>356</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>126</x>
+     <y>356</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>V9_poli_ch</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>V5_poli_ch</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>126</x>
+     <y>356</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>126</x>
+     <y>310</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>V9_poli_ch</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>V2_poli_ch</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>126</x>
+     <y>356</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>126</x>
+     <y>264</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>V2_poli_ch</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>V5_poli_ch</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>117</x>
+     <y>264</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>123</x>
+     <y>310</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>V2_poli_ch</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>V9_poli_ch</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>126</x>
+     <y>264</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>126</x>
+     <y>356</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>V5_poli_ch</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>V9_poli_ch</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>126</x>
+     <y>310</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>126</x>
+     <y>356</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>V5_poli_ch</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>V2_poli_ch</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>126</x>
+     <y>310</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>126</x>
+     <y>264</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>V2_poli_otch</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>V2_poli_otch</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>302</x>
+     <y>270</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>315</x>
+     <y>265</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>V2_poli_otch</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>V5_poli_otch</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>254</x>
+     <y>268</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>269</x>
+     <y>313</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>V2_poli_otch</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>V9_poli_otch</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>289</x>
+     <y>269</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>291</x>
+     <y>351</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>V5_poli_otch</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>V5_poli_otch</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>412</x>
+     <y>310</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>433</x>
+     <y>307</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>V5_poli_otch</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>V2_poli_otch</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>394</x>
+     <y>307</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>401</x>
+     <y>265</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>V5_poli_otch</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>V9_poli_otch</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>386</x>
+     <y>313</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>387</x>
+     <y>351</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>V9_poli_otch</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>V9_poli_otch</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>337</x>
+     <y>359</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>352</x>
+     <y>356</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>V9_poli_otch</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>V5_poli_otch</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>321</x>
+     <y>356</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>329</x>
+     <y>310</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>V9_poli_otch</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>V2_poli_otch</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>365</x>
+     <y>351</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>369</x>
+     <y>266</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
